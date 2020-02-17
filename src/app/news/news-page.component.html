@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <h3>Ultimas Noticias</h3>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row around-xs news-box">
+  <div *ngFor="let item of news" class="col-lg-3 col-xs-12">
+    <a [routerLink]="['detalle', item.slug]">
+      <mat-card class="card">
+        <mat-card-content>
+          <h3>{{ item.title }}</h3>
+          <hr class="separator" />
+          <p>
+            <img
+              [defaultImage]="
+                'https://placeholder.pics/svg/450x300/DEDEDE/555555/Cargando%20imagen...'
+              "
+              [lazyLoad]="item.mainImg"
+              alt=""
+            />
+            <strong>
+              {{ item.lastUpdate }}
+            </strong>
+          </p>
+          <p>
+            {{ item.shortDesc }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </a>
+  </div>
+</div>
