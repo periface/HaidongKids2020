@@ -1,19 +1,16 @@
 @import "../../variables.scss";
 .hero-container {
-  background: url(https://pm1.narvii.com/6749/393f7781aab96a2ddd4b16655e24c0245a12cd3bv2_hq.jpg);
+  background: url(/assets/img/bg.gif);
   height: 500px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   .hero-text {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    * {
-      color: white;
-    }
     img {
       width: 35%;
     }
@@ -23,6 +20,17 @@
       text-transform: uppercase;
       margin: 40px auto 0;
       text-shadow: 1px 1px 1px #000;
+    }
+    h4 {
+      font-size: 21px;
+      font-weight: bold;
+      width: 60%;
+      margin: 0 auto;
+      padding-top: 0%;
+      color: red !important;
+    }
+    button {
+      margin: 10px;
     }
   }
 }
@@ -54,7 +62,10 @@
     flex-grow: 1;
     align-self: flex-start;
     margin: 0 auto;
-    text-align: justify;
+    text-align: center;
+    img {
+      width: 45%;
+    }
     h2 {
       text-align: center;
     }
@@ -120,16 +131,20 @@
 }
 .ninja-1 {
   position: absolute;
-  top: 65%;
+  top: 60%;
   left: 30%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .ninja-2 {
   position: absolute;
-  top: 65%;
+  top: 60%;
   left: 70%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%) scaleX(-1);
   filter: hue-rotate(90deg);
+}
+.nes-progress {
+  width: 60%;
+  height: 25px;
 }

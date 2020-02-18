@@ -6,7 +6,6 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { AngularMaterialModule } from '../shared/angular-material.module';
 import { HomeButtonsComponent } from './components/home-buttons/home-buttons.component';
 import { WelcomeComponent } from './welcome.component';
-
 const routes: Routes = [{ path: '', component: WelcomeComponent }];
 
 @NgModule({
@@ -19,4 +18,4 @@ const routes: Routes = [{ path: '', component: WelcomeComponent }];
   ],
   exports: [RouterModule]
 })
-export class WelcomeRoutingModule {}
+export class WelcomeRoutingModule { }
