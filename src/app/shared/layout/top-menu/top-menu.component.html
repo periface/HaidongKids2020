@@ -1,9 +1,10 @@
 <div class="main-menu-container">
   <mat-toolbar color="primary">
-    <mat-toolbar-row class="menu-items"
-      ><div *ngFor="let item of this.routes">
-        <a class="nes-badge" [routerLink]="item.url"><span class="is-dark">{{ item.title }}</span></a>
+    <mat-toolbar-row class="menu-items">
+      <div *ngFor="let item of this.routes">
+        <a class="nes-badge"><span class="is-dark">{{ item.title }}</span></a>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
 </div>
+<!--[routerLink]="item.url"-->
