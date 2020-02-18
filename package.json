@@ -12,7 +12,9 @@
     "dev:spa": "ng serve -c spa",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start:heroku": "node ./dist/app/server/main.js",
+    "postinstall": "ng build -c production"
   },
   "dependencies": {
     "@angular/animations": "~8.1.0-rc.0",
