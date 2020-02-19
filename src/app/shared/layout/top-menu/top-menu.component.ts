@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+declare var dialogPolyfill;
 @Component({
   templateUrl: './top-menu.component.html',
   styleUrls: ['./top-menu.component.scss'],
@@ -46,6 +46,7 @@ export class TopMenuComponent {
   constructor() { }
   openMenu() {
     var modal = document.getElementById('dialog-dark-rounded') as any;
+    dialogPolyfill.registerDialog(modal);
     modal.showModal()
   }
 }

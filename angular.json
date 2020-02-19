@@ -41,12 +41,18 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
             "styles": [
               "src/styles.scss",
-              "node_modules/flexboxgrid/dist/flexboxgrid.min.css"
+              "node_modules/flexboxgrid/dist/flexboxgrid.min.css",
+              "node_modules/dialog-polyfill/dist/dialog-polyfill.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/dialog-polyfill/dist/dialog-polyfill.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -135,7 +141,10 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
             "styles": [
               "src/styles.scss",
               "node_modules/flexboxgrid/dist/flexboxgrid.min.css"
@@ -151,7 +160,9 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "e2e": {
