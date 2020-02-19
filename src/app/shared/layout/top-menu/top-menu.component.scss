@@ -86,3 +86,42 @@
 .nes-badge {
   width: 12.5em;
 }
+.menu-custom {
+  display: none;
+}
+.cancel {
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .mat-toolbar.mat-primary {
+    background: #3d3662;
+    color: #fff;
+  }
+  .nes-menu-item {
+    display: none !important;
+  }
+  .menu-custom {
+    display: inline-block;
+    margin-top: 1em;
+  }
+  dialog {
+    margin: 1.5em;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .mat-toolbar.mat-primary {
+    background: #3d3662;
+    color: #fff;
+  }
+  .nes-menu-item {
+    display: none !important;
+  }
+  .menu-custom {
+    display: inline-block;
+    margin-top: 1em;
+  }
+  dialog {
+    margin: 1.5em;
+  }
+}

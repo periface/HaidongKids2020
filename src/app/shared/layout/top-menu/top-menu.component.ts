@@ -43,5 +43,9 @@ export class TopMenuComponent {
       url: 'cursos'
     },
   ];
-  constructor() {}
+  constructor() { }
+  openMenu() {
+    var modal = document.getElementById('dialog-dark-rounded') as any;
+    modal.showModal()
+  }
 }

@@ -1,10 +1,23 @@
 <div class="main-menu-container">
   <mat-toolbar color="primary">
     <mat-toolbar-row class="menu-items">
-      <div *ngFor="let item of this.routes">
+      <div class="nes-menu-item" *ngFor="let item of this.routes">
         <a class="nes-badge"><span class="is-dark">{{ item.title }}</span></a>
       </div>
+      <a class="nes-badge menu-custom" (click)="openMenu()"><span class="is-dark">Menu</span></a>
     </mat-toolbar-row>
   </mat-toolbar>
 </div>
 <!--[routerLink]="item.url"-->
+<dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">
+  <form method="dialog">
+    <p class="title">¿A donde quieres ir?</p>
+    <img style="width: 40%;" src="/assets/img/pixel-wizard.webp"><br>
+    <a *ngFor="let item of this.routes" class="nes-btn is-primary">{{ item.title }}</a>
+    <div class="cancel">
+      <br><br>
+
+      <button class="nes-btn">Cancelar</button>
+    </div>
+  </form>
+</dialog>
