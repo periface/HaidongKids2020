@@ -2,7 +2,7 @@
   <mat-toolbar color="primary">
     <mat-toolbar-row class="menu-items">
       <div class="nes-menu-item" *ngFor="let item of this.routes">
-        <a class="nes-badge"><span class="is-dark">{{ item.title }}</span></a>
+        <a class="nes-badge" [routerLink]="item.url"><span class="is-dark">{{ item.title }}</span></a>
       </div>
       <button class="nes-btn is-dark menu-custom" (click)="openMenu()">Menu</button>
     </mat-toolbar-row>
@@ -13,7 +13,7 @@
   <form method="dialog">
     <p class="title">¿A donde quieres ir?</p>
     <img style="width: 40%;" src="/assets/img/pixel-wizard.webp"><br>
-    <a *ngFor="let item of this.routes" class="nes-btn is-primary">{{ item.title }}</a>
+    <a *ngFor="let item of this.routes" [routerLink]="item.url" class="nes-btn is-primary">{{ item.title }}</a>
     <div class="cancel">
       <br><br>
 

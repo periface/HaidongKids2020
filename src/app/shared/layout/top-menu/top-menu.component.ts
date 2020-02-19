@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 declare var dialogPolyfill;
 @Component({
   templateUrl: './top-menu.component.html',
   styleUrls: ['./top-menu.component.scss'],
   selector: 'app-top-menu'
 })
-export class TopMenuComponent {
+export class TopMenuComponent implements OnInit {
+
   /**
    *
    */
@@ -14,36 +16,25 @@ export class TopMenuComponent {
       title: 'Inicio',
       url: '/'
     },
-    {
-      title: 'Noticias',
-      url: 'noticias'
-    },
     // {
-    //   title: 'Proyectos',
-    //   url: 'proyectos'
-    // },
-    // {
-    //   title: 'Patentes',
-    //   url: 'patentes'
-    // },
-    // {
-    //   title: 'Servicios',
-    //   url: 'servicios'
-    // },
-    // {
-    //   title: 'Convocatorias',
-    //   url: 'convocatorias'
+    //   title: 'Noticias',
+    //   url: 'noticias'
     // },
     {
       title: 'Inscrpciones',
-      url: 'maestria'
+      url: 'inscrpciones'
     },
     {
-      title: 'Maestros',
-      url: 'cursos'
+      title: 'Maestro(a)',
+      url: 'maestro'
     },
   ];
-  constructor() { }
+  constructor(private router: Router) {
+
+
+  }
+  ngOnInit(): void {
+  }
   openMenu() {
     var modal = document.getElementById('dialog-dark-rounded') as any;
     dialogPolyfill.registerDialog(modal);

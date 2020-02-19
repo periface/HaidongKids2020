@@ -9,24 +9,24 @@ export const APP_ROUTES: Routes = [
     loadChildren: () =>
       import('./welcome/welcome.module').then(m => m.WelcomeModule)
   },
-  {
-    path: 'noticias',
-    loadChildren: () => import('./news/news.module').then(m => m.NewsModule)
-  },
+  // {
+  //   path: 'noticias',
+  //   loadChildren: () => import('./news/news.module').then(m => m.NewsModule)
+  // },
   {
     path: 'ventanillaunica',
     loadChildren: () =>
       import('./contact/contact.module').then(m => m.ContactModule)
   },
   {
-    path: 'maestria',
+    path: 'maestro',
     loadChildren: () =>
       import('./master/master.module').then(m => m.MasterModule)
   },
   {
-    path: 'cursos',
+    path: 'inscrpciones',
     loadChildren: () =>
-      import('./courses/courses.module').then(m => m.CoursesModule)
+      import('./register/register.module').then(m => m.RegisterModule)
   },
   {
     path: 'gracias',
