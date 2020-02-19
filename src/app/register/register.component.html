@@ -1,45 +1,40 @@
 <div class="container">
   <div class="row middle-xs">
-    <div *ngIf="form"  class="col-xs-12">
+    <div *ngIf="form" class="col-xs-12">
       <h3 class="text-center">Formulario de Inscripción</h3>
       <form (ngSubmit)="save()" class="form-register" [formGroup]="form">
         <div class="example-container">
           <mat-form-field>
-            <input
-              matInput
-              formControlName="name"
-              type="text"
-              placeholder="Nombre completo"
-              required
-            />
+            <input matInput formControlName="name" type="text" placeholder="Nombre completo (Niño)" required />
           </mat-form-field>
         </div>
         <div class="example-container">
           <mat-form-field>
-            <input
-              matInput
-              formControlName="email"
-              type="email"
-              placeholder="Email"
-              required
-            />
+            <input matInput formControlName="age" type="number" min="5" max="10" placeholder="Edad (Niño)" required />
+          </mat-form-field>
+        </div>
+        <div class="example-container">
+          <mat-form-field>
+            <input matInput formControlName="nameParent" type="text" placeholder="Nombre completo (Padre Tutor)" required />
+          </mat-form-field>
+        </div>
+        <div class="example-container">
+          <mat-form-field>
+            <input matInput formControlName="phone" type="text" placeholder="Telefono de contacto" required />
+          </mat-form-field>
+        </div>
+
+        <div class="example-container">
+          <mat-form-field>
+            <input matInput formControlName="email" type="email" placeholder="Correo electronico" required />
           </mat-form-field>
         </div>
         <div *ngIf="windowDefined" class="example-container text-center center">
-          <ngx-recaptcha2
-            #captchaElem
-            [siteKey]="'6LeeXRcUAAAAAJBW9N7D_VmLfQa2tmTDKQYl-m8p'"
-            [useGlobalDomain]="false"
-            formControlName="recaptcha"
-          >
+          <ngx-recaptcha2 #captchaElem [siteKey]="'6LeeXRcUAAAAAJBW9N7D_VmLfQa2tmTDKQYl-m8p'" [useGlobalDomain]="false"
+            formControlName="recaptcha">
           </ngx-recaptcha2>
           <br /><br />
-          <button
-            [disabled]="!form.valid"
-            style="width: 20%;"
-            color="primary"
-            class="nes-btn"
-          >
+          <button [disabled]="!form.valid" style="width: 20%;" color="primary" class="nes-btn">
             Enviar
           </button>
 
