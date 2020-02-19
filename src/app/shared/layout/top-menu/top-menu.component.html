@@ -4,7 +4,7 @@
       <div class="nes-menu-item" *ngFor="let item of this.routes">
         <a class="nes-badge"><span class="is-dark">{{ item.title }}</span></a>
       </div>
-      <a class="nes-badge menu-custom" (click)="openMenu()"><span class="is-dark">Menu</span></a>
+      <button class="nes-btn is-dark menu-custom" (click)="openMenu()">Menu</button>
     </mat-toolbar-row>
   </mat-toolbar>
 </div>
