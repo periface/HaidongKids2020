@@ -1,14 +1,13 @@
-@import "../../variables.scss";
 .hero-container {
   background: url(/assets/img/bg.gif);
-  height: 500px;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   background-position-y: 90%;
   .hero-text {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -159,7 +158,23 @@
   width: 60%;
   height: 25px;
 }
-
+.benefits {
+  background-image: url(/assets/img/coreabg.png);
+  background-size: cover;
+  min-height: 100vh !important;
+}
+.content-benefits {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  text-align: justify;
+  background-color: #ffffffab;
+  * {
+    color: black;
+  }
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .hero-container {
@@ -198,6 +213,12 @@
     }
     p {
       font-size: 0.8em;
+    }
+  }
+  .content-benefits {
+    background-color: #000000ab;
+    * {
+      color: white;
     }
   }
   .content-about {
@@ -258,4 +279,7 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+}
+.enfasis {
+  font-size: 1.2em;
 }
