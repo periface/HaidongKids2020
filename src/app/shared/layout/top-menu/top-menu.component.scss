@@ -1,5 +1,7 @@
 @import "../../../../variables.scss";
-
+dialog {
+  text-align: center;
+}
 .top-logo-container {
   display: flex;
   flex-direction: row;

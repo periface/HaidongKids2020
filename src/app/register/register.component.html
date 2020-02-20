@@ -7,22 +7,12 @@
       <form (ngSubmit)="save()" class="form-register" [formGroup]="form">
         <div class="example-container">
           <mat-form-field>
-            <input matInput formControlName="name" type="text" placeholder="Nombre completo (Niño)" required />
+            <input matInput formControlName="name" type="text" placeholder="Nombre" required />
           </mat-form-field>
         </div>
         <div class="example-container">
           <mat-form-field>
-            <input matInput formControlName="age" type="number" min="5" max="10" placeholder="Edad (Niño)" required />
-          </mat-form-field>
-        </div>
-        <div class="example-container">
-          <mat-form-field>
-            <input matInput formControlName="nameParent" type="text" placeholder="Nombre completo (Padre Tutor)" required />
-          </mat-form-field>
-        </div>
-        <div class="example-container">
-          <mat-form-field>
-            <input matInput formControlName="phone" type="text" placeholder="Telefono de contacto" required />
+            <input matInput formControlName="phone" type="text" placeholder="Telefono de contacto" />
           </mat-form-field>
         </div>
 
@@ -31,6 +21,13 @@
             <input matInput formControlName="email" type="email" placeholder="Correo electronico" required />
           </mat-form-field>
         </div>
+
+        <div class="example-container">
+          <mat-form-field>
+            <textarea matInput formControlName="message" placeholder="Mensaje" required></textarea>
+          </mat-form-field>
+        </div>
+
         <div *ngIf="windowDefined" class="example-container text-center center">
           <ngx-recaptcha2 #captchaElem [siteKey]="'6LeeXRcUAAAAAJBW9N7D_VmLfQa2tmTDKQYl-m8p'" [useGlobalDomain]="false"
             formControlName="recaptcha">

@@ -3,8 +3,9 @@
   background: url(/assets/img/bg.gif);
   height: 500px;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
+  background-position: bottom;
+  background-position-y: 90%;
   .hero-text {
     position: absolute;
     top: 40%;
@@ -48,6 +49,9 @@
   padding: 30px;
   width: 75%;
   margin: 0 auto;
+}
+.content-small {
+  width: 50% !important;
 }
 .content-about {
   display: flex;
@@ -188,7 +192,7 @@
   }
   .content {
     padding: 30px;
-    width: 100%;
+    width: 100% !important;
     h2 {
       font-size: 1em;
     }
@@ -237,7 +241,7 @@
   }
   .content {
     padding: 30px;
-    width: 100%;
+    width: 100% !important;
     h2 {
       font-size: 1em;
     }
