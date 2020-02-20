@@ -24,7 +24,7 @@ export const APP_ROUTES: Routes = [
       import('./master/master.module').then(m => m.MasterModule)
   },
   {
-    path: 'inscrpciones',
+    path: 'contacto',
     loadChildren: () =>
       import('./register/register.module').then(m => m.RegisterModule)
   },

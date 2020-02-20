@@ -21,13 +21,14 @@ export class TopMenuComponent implements OnInit {
     //   url: 'noticias'
     // },
     {
-      title: 'Inscrpciones',
-      url: 'inscrpciones'
-    },
-    {
       title: 'Maestro(a)',
       url: 'maestro'
     },
+    {
+      title: 'Contacto',
+      url: 'contacto'
+    }
+
   ];
   constructor(private router: Router) {
 
