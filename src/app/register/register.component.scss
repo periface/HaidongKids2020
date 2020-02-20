@@ -1,3 +1,6 @@
+.nes-btn {
+  width: 20%;
+}
 .example-container {
   display: flex;
   flex-direction: column;
@@ -19,7 +22,27 @@
   }
 }
 .form-register {
-  padding-left: 15em!important;
-  padding-right: 15em!important;
+  padding-left: 15em !important;
+  padding-right: 15em !important;
 }
 
+@media only screen and (max-width: 600px) {
+  .form-register {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .nes-btn {
+    width: 100% !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 980px) {
+  .form-register {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .nes-btn {
+    width: 100% !important;
+  }
+}
