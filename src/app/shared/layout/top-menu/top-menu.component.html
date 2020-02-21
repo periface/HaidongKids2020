@@ -13,7 +13,7 @@
   <form method="dialog">
     <p class="title">¿A donde quieres ir?</p>
     <img style="width: 40%;" src="/assets/img/samura1anim.gif"><br><br>
-    <a *ngFor="let item of this.routes" (click)="closeDialog()" [routerLink]="item.url"
+    <a *ngFor="let item of this.routes" [routerLink]="item.url"
       class="nes-btn is-primary">{{ item.title }}</a>
     <div class="cancel">
       <br><br>

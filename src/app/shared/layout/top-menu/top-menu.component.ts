@@ -30,15 +30,25 @@ export class TopMenuComponent implements OnInit {
     }
 
   ];
+  modal: any;
   constructor(private router: Router) {
 
 
   }
   ngOnInit(): void {
+    this.router.events.subscribe(() => {
+      if (this.modal) {
+        this.closeMenu();
+      }
+
+    })
   }
   openMenu() {
-    var modal = document.getElementById('dialog-dark-rounded') as any;
-    dialogPolyfill.registerDialog(modal);
-    modal.showModal()
+    this.modal = document.getElementById('dialog-dark-rounded') as any;
+    dialogPolyfill.registerDialog(this.modal);
+    this.modal.showModal()
+  }
+  closeMenu() {
+    this.modal.close()
   }
 }

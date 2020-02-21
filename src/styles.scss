@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 $azul-cinotam: #171796;
 $naranja-cinotam: #e75204;
 $celeste-cinotam: #008cba;
@@ -7,15 +7,19 @@ $cafe-cinotam: #a96218;
 body {
   margin: 0 auto;
   // font-family: 'Open Sans', sans-serif;
-  font-family: 'Press Start 2P', cursive!important;
+  font-family: "Press Start 2P", cursive !important;
   min-height: 100vh;
 }
-*{
-  font-family: 'Press Start 2P', cursive!important;
+* {
+  font-family: "Press Start 2P", cursive !important;
 }
 .text-center {
   text-align: center !important;
 }
+.text-justify {
+  text-align: justify !important;
+}
+
 .cinotam-button {
   margin: 10px;
   border: 2px solid #a96218 !important;
