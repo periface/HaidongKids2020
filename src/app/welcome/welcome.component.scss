@@ -192,6 +192,12 @@
     color: white;
   }
 }
+.family {
+  border-radius: 40px;
+  opacity: 0.9;
+  image-rendering: pixelated;
+  width: 100%;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .hero-container {
@@ -257,6 +263,11 @@
     border-width: 2px;
     margin: 21px;
   }
+  .content-final {
+    h3 {
+      font-size: 0.8em;
+    }
+  }
 }
 .old-samurai-img {
   width: 40%;
@@ -296,6 +307,11 @@
     border-color: #000;
     border-width: 2px;
     margin: 21px;
+  }
+  .content-final {
+    h3 {
+      font-size: 0.8em;
+    }
   }
 }
 
