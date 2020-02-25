@@ -1,3 +1,9 @@
+.icon-list {
+  margin-top: 10px;
+  a {
+    margin-right: 10px;
+  }
+}
 .hero-container {
   background: url(/assets/img/bg.gif);
   height: 100vh;
@@ -5,6 +11,7 @@
   background-size: cover;
   background-position: bottom;
   background-position-y: 90%;
+  margin-top: 90px;
   .hero-text {
     position: absolute;
     top: 50%;
@@ -37,7 +44,6 @@
 .section {
   width: 100%;
   min-height: 100px;
-
   position: relative;
 }
 .section-inverted {
@@ -55,83 +61,6 @@
 .content-full {
   width: 100% !important;
   padding: 0 !important;
-}
-.content-about {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  padding-left: 15%;
-  padding-right: 15%;
-  .item {
-    max-width: 45%;
-    flex-grow: 1;
-    align-self: flex-start;
-    margin: 0 auto;
-    text-align: center;
-    img {
-      width: 45%;
-      image-rendering: pixelated;
-    }
-    h2 {
-      text-align: center;
-    }
-  }
-}
-.visita-cinotam-container {
-  width: 75%;
-  margin: 0 auto;
-  h2 {
-    text-align: center;
-  }
-  .info-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    .item {
-      text-align: center;
-      max-width: 45%;
-      flex-grow: 1;
-      align-self: flex-start;
-      margin: 0 auto;
-      img {
-        width: 90%;
-      }
-    }
-  }
-}
-.logos {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  width: 75%;
-  margin: 0 auto;
-  .logo {
-    flex-grow: 1;
-    align-self: center;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .inegi {
-    img {
-      width: 50%;
-    }
-  }
-  .conacyt {
-    img {
-      width: 50%;
-    }
-  }
-  .gobtam {
-    img {
-      width: 50%;
-    }
-  }
 }
 .separator.welcome {
   width: 75%;
@@ -157,10 +86,6 @@
   img {
     width: 100%;
   }
-}
-.nes-progress {
-  width: 60%;
-  height: 25px;
 }
 .benefits {
   background-image: url(/assets/img/coreabg.png);
@@ -201,6 +126,49 @@
   opacity: 0.9;
   image-rendering: pixelated;
   width: 100%;
+}
+.old-samurai-img {
+  width: 40%;
+  border-radius: 150px;
+}
+.tv {
+  //background: url(/assets/img/old_tv.png);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .info {
+    padding: 10px;
+    width: 30%;
+    background: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 84%;
+    border-radius: 50px;
+    border: 3px solid;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  img {
+    width: 65%;
+    border-radius: 50px;
+    border: 4px solid;
+  }
+}
+.map {
+  position: absolute;
+  top: 45%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  img {
+    width: 85%;
+  }
+}
+.enfasis {
+  font-size: 1.2em;
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -273,47 +241,28 @@
       font-size: 0.8em;
     }
   }
-}
-.old-samurai-img {
-  width: 40%;
-  border-radius: 150px;
-}
-.tv {
-  //background: url(/assets/img/old_tv.png);
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  .info {
-    padding: 10px;
-    width: 30%;
-    background: white;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 84%;
-    border-radius: 50px;
-    border: 3px solid;
-    p {
-      margin-bottom: 0;
+  .tv {
+    height: 65vh !important;
+    min-height: 65vh !important;
+    .info {
+      padding: 15px;
+      width: 80%;
+      left: 50%;
+      top: 80%;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    img {
+      width: 100%;
     }
   }
-  img {
-    width: 65%;
-    border-radius: 50px;
-    border: 4px solid;
+  .map {
+    top: 37%;
+    left: 45%;
   }
 }
-.map {
-  position: absolute;
-  top: 45%;
-  left: 47%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  img {
-    width: 85%;
-  }
-}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 980px) {
   .hero-container {
@@ -355,6 +304,26 @@
       font-size: 0.8em;
     }
   }
+  .tv {
+    height: 65vh !important;
+    min-height: 65vh !important;
+    .info {
+      padding: 15px;
+      width: 80%;
+      left: 50%;
+      top: 80%;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .map {
+    top: 37%;
+    left: 45%;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -367,7 +336,4 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-}
-.enfasis {
-  font-size: 1.2em;
 }
