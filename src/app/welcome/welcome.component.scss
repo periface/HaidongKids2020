@@ -52,6 +52,10 @@
 .content-small {
   width: 50% !important;
 }
+.content-full {
+  width: 100% !important;
+  padding: 0 !important;
+}
 .content-about {
   display: flex;
   flex-direction: row;
@@ -207,6 +211,7 @@
     .hero-text {
       z-index: 9;
       width: 100%;
+      top: 40%;
       h1 {
         font-size: 30px;
       }
@@ -273,6 +278,42 @@
   width: 40%;
   border-radius: 150px;
 }
+.tv {
+  //background: url(/assets/img/old_tv.png);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .info {
+    padding: 10px;
+    width: 30%;
+    background: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 84%;
+    border-radius: 50px;
+    border: 3px solid;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  img {
+    width: 65%;
+    border-radius: 50px;
+    border: 4px solid;
+  }
+}
+.map {
+  position: absolute;
+  top: 45%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  img {
+    width: 85%;
+  }
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 980px) {
   .hero-container {
@@ -283,6 +324,7 @@
     width: 100%;
     height: 70vh;
     .hero-text {
+      top: 40%;
       z-index: 9;
       width: 100%;
       h1 {
