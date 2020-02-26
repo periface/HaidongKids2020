@@ -1,3 +1,31 @@
+/*
+<img src="/assets/img/karina.png" class="karina-org" alt="">
+        <img src="/assets/img/karina_px.png" class="karina-px" alt="">
+
+*/
+.karina-img {
+  display: block;
+  box-sizing: border-box;
+  background-image: url(/assets/img/karina_px.png);
+  width: 200px;
+  height: 175px;
+  padding-left: 200px;
+  margin: 0 auto;
+  background-size: cover;
+  transition: background 1s;
+  background-repeat: no-repeat;
+  border-radius: 100px;
+}
+.karina-img:hover {
+  background-image: url(/assets/img/karina.png)!important;
+}
+.karina-org {
+  border-radius: 65px;
+  display: none;
+}
+.karina-px {
+  border-radius: 65px;
+}
 .section {
   width: 100%;
   min-height: 100px;

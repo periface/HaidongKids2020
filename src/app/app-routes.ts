@@ -9,15 +9,6 @@ export const APP_ROUTES: Routes = [
     loadChildren: () =>
       import('./welcome/welcome.module').then(m => m.WelcomeModule)
   },
-  // {
-  //   path: 'noticias',
-  //   loadChildren: () => import('./news/news.module').then(m => m.NewsModule)
-  // },
-  {
-    path: 'ventanillaunica',
-    loadChildren: () =>
-      import('./contact/contact.module').then(m => m.ContactModule)
-  },
   {
     path: 'maestro',
     loadChildren: () =>
