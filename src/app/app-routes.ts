@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { ErrorComponent } from './error.component';
 import { NotFoundComponent } from './not-found.component';
 import { ThanksComponent } from './shared/thanks.component';
+import { SamuraiGameComponent } from './games/samurai-run/samurai-run.component';
 
 export const APP_ROUTES: Routes = [
   {
@@ -20,6 +21,11 @@ export const APP_ROUTES: Routes = [
       import('./register/register.module').then(m => m.RegisterModule)
   },
   {
+    path: 'noticias',
+    loadChildren: () =>
+      import('./news/news.module').then(m => m.NewsModule)
+  },
+  {
     path: 'gracias',
     component: ThanksComponent
   },
@@ -30,6 +36,9 @@ export const APP_ROUTES: Routes = [
   {
     path: 'error',
     component: ErrorComponent
+  }, {
+    path: 'game',
+    component: SamuraiGameComponent
   },
   { path: '**', component: NotFoundComponent }
 ];

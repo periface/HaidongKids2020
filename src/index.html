@@ -36,6 +36,14 @@
 
 <body>
   <app-root></app-root>
+  <script>
+    if (global === undefined) {
+      var global = window;
+    }
+  </script>
+  <script src="assets/js/games/samurai-run/scenes/level1.js"></script>
+  <script src="assets/js/games/samurai-run/scenes/gameOver.js"></script>
+  <script src="assets/js/games/samurai-run/index.js"></script>
 </body>
 
 </html>

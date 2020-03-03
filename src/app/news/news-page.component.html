@@ -1,8 +1,9 @@
-<div class="container">
+<div class="container main-content">
   <div class="row">
     <div class="col-xs-12">
       <div class="box">
-        <h3>Ultimas Noticias</h3>
+        <br>
+        <h2 class="text-center">Ultimas Noticias</h2>
         <p></p>
       </div>
     </div>
@@ -15,16 +16,12 @@
         <mat-card-content>
           <h3>{{ item.title }}</h3>
           <hr class="separator" />
-          <p>
-            <img
-              [defaultImage]="
-                'https://placeholder.pics/svg/450x300/DEDEDE/555555/Cargando%20imagen...'
-              "
-              [lazyLoad]="item.mainImg"
-              alt=""
-            />
+          <img [defaultImage]="
+            'https://placeholder.pics/svg/450x300/DEDEDE/555555/Cargando%20imagen...'
+          " [lazyLoad]="item.mainImg" alt="" />
+          <p class="text-center">
             <strong>
-              {{ item.lastUpdate }}
+              {{ item.lastUpdate | date}}
             </strong>
           </p>
           <p>

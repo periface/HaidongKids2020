@@ -19,13 +19,15 @@ import { AngularMaterialModule } from './shared/angular-material.module';
 import { ScrollableDirective } from './shared/directives/scrollable/scrollable.directive';
 import { LayoutModule } from './shared/layout/layout.module';
 import { ThanksComponent } from './shared/thanks.component';
+import { SamuraiGameComponent } from './games/samurai-run/samurai-run.component';
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
     ScrollableDirective,
     ThanksComponent,
-    ErrorComponent
+    ErrorComponent,
+    SamuraiGameComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-app' }),
@@ -46,4 +48,4 @@ import { ThanksComponent } from './shared/thanks.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

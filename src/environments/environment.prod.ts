@@ -1,12 +1,13 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: 'AIzaSyDg6RrhPRXhdAYOU2Ky8kgUS_dj3M00lL8',
-    authDomain: 'cinotam-2b181.firebaseapp.com',
-    databaseURL: 'https://cinotam-2b181.firebaseio.com',
-    projectId: 'cinotam-2b181',
-    storageBucket: 'cinotam-2b181.appspot.com',
-    messagingSenderId: '899436362995',
-    appId: '1:899436362995:web:2967bba257ebcbed'
+    apiKey: "AIzaSyBsO0c4c8MureC0zqdmUi96_2RVEdFAgSU",
+    authDomain: "kaizen-a5da7.firebaseapp.com",
+    databaseURL: "https://kaizen-a5da7.firebaseio.com",
+    projectId: "kaizen-a5da7",
+    storageBucket: "kaizen-a5da7.appspot.com",
+    messagingSenderId: "972560787237",
+    appId: "1:972560787237:web:dc2863cd36c56ae881dccc",
+    measurementId: "G-N28X0GBSTQ"
   }
 };

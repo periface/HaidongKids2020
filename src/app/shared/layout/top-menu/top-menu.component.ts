@@ -16,10 +16,10 @@ export class TopMenuComponent implements OnInit {
       title: 'Inicio',
       url: '/'
     },
-    // {
-    //   title: 'Noticias',
-    //   url: 'noticias'
-    // },
+    {
+      title: 'Noticias',
+      url: 'noticias'
+    },
     {
       title: 'Maestro(a)',
       url: 'maestro'

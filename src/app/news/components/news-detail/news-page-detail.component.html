@@ -1,24 +1,22 @@
-<div
-  *ngIf="this.newsPost"
-  class="news-hero-container"
-  [ngStyle]="{ background: 'url(' + newsPost.mainImg + ')' }"
->
-  <div class="background"></div>
-  <div class="title-container">
-    <h3>{{ newsPost.title }}</h3>
-    <p class="text-center">Publicado el: {{ newsPost.creationDate | date }}</p>
+<div class="main-content">
+  <div *ngIf="this.newsPost" class="news-hero-container " [ngStyle]="{ background: 'url(' + newsPost.mainImg + ')' }">
+    <div class="background"></div>
+    <div class="title-container">
+      <h3>{{ newsPost.title }}</h3>
+      <p class="text-center">Publicado el: {{ newsPost.creationDate | date }}</p>
+    </div>
+    <div class="button-bottom">
+      <a (click)="scrollToBottom()"><img src="/assets/img/arrow-down.png" /></a>
+    </div>
   </div>
-  <div class="button-bottom">
-    <a (click)="scrollToBottom()"><i class="fa fa-arrow-down"></i></a>
-  </div>
-</div>
-<div *ngIf="this.newsPost" class="article-container">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="article-content" [innerHTML]="newsPost.content"></div>
+  <div *ngIf="this.newsPost" class="article-container">
+    <div class="container">
+      <div class="">
+        <div class="col-xs-12">
+          <div class="article-content" [innerHTML]="newsPost.content"></div>
+        </div>
       </div>
     </div>
   </div>
+  <div #bottom class="bottom"></div>
 </div>
-<div #bottom class="bottom"></div>

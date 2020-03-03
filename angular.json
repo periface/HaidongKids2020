@@ -51,7 +51,8 @@
               "node_modules/dialog-polyfill/dist/dialog-polyfill.css"
             ],
             "scripts": [
-              "node_modules/dialog-polyfill/dist/dialog-polyfill.js"
+              "node_modules/dialog-polyfill/dist/dialog-polyfill.js",
+              "node_modules/phaser/dist/phaser.min.js"
             ]
           },
           "configurations": {
