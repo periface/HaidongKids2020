@@ -1,5 +1,5 @@
 <div class="container main-content">
-  <div class="row">
+  <div class="">
     <div class="col-xs-12">
       <div class="box">
         <br>
@@ -9,7 +9,7 @@
     </div>
   </div>
 </div>
-<div class="row around-xs news-box">
+<div class="around-xs news-box">
   <div *ngFor="let item of news" class="col-lg-3 col-xs-12">
     <a [routerLink]="['detalle', item.slug]">
       <mat-card class="card">
