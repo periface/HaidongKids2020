@@ -10,7 +10,7 @@ export function createApi(options: ServerAPIOptions) {
   const router = express();
 
   router.use(createNgRenderMiddleware(options.distPath, options.ngSetup));
-  router.use(compression());
+  
   return router;
 }
 
@@ -19,6 +19,7 @@ export function createNgRenderMiddleware(
   ngSetup: NgSetupOptions
 ) {
   const router = express();
+  router.use(compression());
   router.set('view engine', 'html');
   router.set('views', distPath);
 
