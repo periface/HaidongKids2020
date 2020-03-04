@@ -6,7 +6,7 @@
     "ng": "ng",
     "prestart": "npm run build:prod",
     "start": "node ./dist/app/server/main.js",
-    "build": "ng build",
+    "build": "ng build --prod",
     "build:prod": "ng build --prod",
     "dev": "ng serve",
     "dev:spa": "ng serve -c spa",
