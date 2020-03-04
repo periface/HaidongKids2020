@@ -1,5 +1,6 @@
 import { NgSetupOptions, ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
+import * as compression from 'compression';
 export interface ServerAPIOptions {
   distPath: string;
   ngSetup?: NgSetupOptions;
@@ -9,7 +10,7 @@ export function createApi(options: ServerAPIOptions) {
   const router = express();
 
   router.use(createNgRenderMiddleware(options.distPath, options.ngSetup));
-
+  router.use(compression());
   return router;
 }
 
