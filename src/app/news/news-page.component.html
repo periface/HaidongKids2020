@@ -9,7 +9,7 @@
     </div>
   </div>
 </div>
-<div class="around-xs news-box container">
+<div class="around-xs news-box container row">
   <div *ngFor="let item of news" class="col-lg-4 col-xs-12">
     <a [routerLink]="['detalle', item.slug]">
       <mat-card class="card">
