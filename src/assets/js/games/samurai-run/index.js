@@ -17,13 +17,12 @@ window.startSamuraiGame = function () {
         physics: {
             default: 'arcade',
             arcade: {
-                gravity: { y: 300 },
+                gravity: { y: 500 },
                 debug: false
             }
         },
-        scene: [LevelOne, GameOver],
+        scene: [LevelOneScene],
         parent: 'game'
     };
     window.game = new Phaser.Game(config);
-    window.game.launch('levelOne');
 }

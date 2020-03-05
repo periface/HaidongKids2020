@@ -1,35 +1,27 @@
-function LevelOne() {
-    Phaser.Scene.call(this, { key: 'levelOne', sceneConfig: {}, active: true });
-    this.preload = function () {
+class LevelOneScene extends Phaser.Scene {
+    constructor() {
+        super("LevelOne");
+    }
+    preload() {
         this.load.image('sky', 'assets/js/games/samurai-run/assets/sky.png');
         this.load.image('ground', 'assets/js/games/samurai-run/assets/platform.png');
         this.load.image('star', 'assets/js/games/samurai-run/assets/star.png');
         this.load.image('bomb', 'assets/js/games/samurai-run/assets/bomb.png');
         this.load.spritesheet('dude', 'assets/js/games/samurai-run/assets/dude.png', { frameWidth: 32, frameHeight: 48 });
     }
-    this.create = function () {
-        //  A simple background for our game
-        this.add.image(400, 300, 'sky');
-
+    create() {
+        this.add.image(0, 0, 'sky').setOrigin(0).setScale(0.5);
         //  The platforms group contains the ground and the 2 ledges we can jump on
         platforms = this.physics.add.staticGroup();
-
-        //  Here we create the ground.
-        //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
-        platforms.create(400, 568, 'ground').setScale(2).refreshBody();
-
-        //  Now let's create some ledges
-        platforms.create(600, 400, 'ground');
-        platforms.create(50, 250, 'ground');
-        platforms.create(750, 220, 'ground');
-
+        platforms.enableBody = true;
+        var ground = platforms.create(100, 490);
+        ground.scale.setTo(2, 2);
         // The player and its settings
-        player = this.physics.add.sprite(100, 450, 'dude');
+        player = this.physics.add.sprite(100, 280, 'dude');
 
         //  Player physics properties. Give the little guy a slight bounce.
         player.setBounce(0.2);
         player.setCollideWorldBounds(true);
-
         //  Our player animations, turning, walking left and walking right.
         this.anims.create({
             key: 'left',
@@ -37,7 +29,6 @@ function LevelOne() {
             frameRate: 10,
             repeat: -1
         });
-
         this.anims.create({
             key: 'turn',
             frames: [{ key: 'dude', frame: 4 }],
@@ -79,12 +70,11 @@ function LevelOne() {
         this.physics.add.collider(bombs, platforms);
 
         //  Checks to see if the player overlaps with any of the stars, if he does call the collectStar function
-        this.physics.add.overlap(player, stars, collectStar, null, this);
+        this.physics.add.overlap(player, stars, this.collectStar, null, this);
 
-        this.physics.add.collider(player, bombs, hitBomb, null, this);
+        this.physics.add.collider(player, bombs, this.hitBomb, null, this);
     }
-
-    this.update = function () {
+    update() {
         if (gameOver) {
             return;
         }
@@ -109,8 +99,7 @@ function LevelOne() {
             player.setVelocityY(-330);
         }
     }
-
-    function collectStar(player, star) {
+    collectStar(player, star) {
         star.disableBody(true, true);
 
         //  Add and update the score
@@ -135,8 +124,7 @@ function LevelOne() {
 
         }
     }
-
-    function hitBomb(player, bomb) {
+    hitBomb(player, bomb) {
         this.physics.pause();
 
         player.setTint(0xff0000);
