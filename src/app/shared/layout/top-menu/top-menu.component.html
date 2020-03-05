@@ -3,9 +3,9 @@
     <mat-toolbar-row class="menu-items">
       <div class="nes-menu-item" *ngFor="let item of this.routes">
         <a class="nes-btn is-primary" [routerLink]="item.url">{{ item.title }}</a>
-        
+
       </div>
-      <button class="nes-btn is-dark menu-custom" (click)="openMenu()">Menu</button>
+      <button class="nes-btn is-dark menu-custom" [disabled]="this.buttonDisabled" (click)="openMenu()">Menu</button>
     </mat-toolbar-row>
   </mat-toolbar>
 </div>

@@ -32,6 +32,7 @@ export class TopMenuComponent implements OnInit {
 
   ];
   modal: any;
+  buttonDisabled: boolean;
   constructor(private router: Router, public dialog: MatDialog) {
 
 
@@ -49,9 +50,11 @@ export class TopMenuComponent implements OnInit {
       width: '80%',
       data: this.routes
     });
-
+    dialogRef.afterOpened().subscribe(() => {
+      this.buttonDisabled = true;
+    })
     dialogRef.afterClosed().subscribe(result => {
-
+      this.buttonDisabled = false
     });
   }
   closeMenu() {
