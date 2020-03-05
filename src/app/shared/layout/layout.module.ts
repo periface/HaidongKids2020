@@ -5,10 +5,12 @@ import { AngularMaterialModule } from '../angular-material.module';
 import { UnderMaintenanceComponent } from '../components/under-mant/under-mant.component';
 import { FooterComponent } from './footer/footer.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
+import { ModalMenuComponent } from './top-menu/modal-menu/modal-menu.component';
 
 @NgModule({
-  exports: [TopMenuComponent, FooterComponent, UnderMaintenanceComponent],
-  declarations: [TopMenuComponent, FooterComponent, UnderMaintenanceComponent],
-  imports: [AngularMaterialModule, CommonModule, RouterModule]
+  exports: [TopMenuComponent, FooterComponent, UnderMaintenanceComponent, ModalMenuComponent],
+  declarations: [TopMenuComponent, FooterComponent, UnderMaintenanceComponent, ModalMenuComponent],
+  imports: [AngularMaterialModule, CommonModule, RouterModule],
+  entryComponents: [ModalMenuComponent]
 })
-export class LayoutModule {}
+export class LayoutModule { }

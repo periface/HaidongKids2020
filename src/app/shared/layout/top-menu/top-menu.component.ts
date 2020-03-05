@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material';
+import { ModalMenuComponent } from './modal-menu/modal-menu.component';
 declare var dialogPolyfill;
 @Component({
   templateUrl: './top-menu.component.html',
@@ -31,7 +33,7 @@ export class TopMenuComponent implements OnInit {
 
   ];
   modal: any;
-  constructor(private router: Router) {
+  constructor(private router: Router, public dialog: MatDialog) {
 
 
   }
@@ -44,9 +46,17 @@ export class TopMenuComponent implements OnInit {
     })
   }
   openMenu() {
-    this.modal = document.getElementById('dialog-dark-rounded') as any;
-    dialogPolyfill.registerDialog(this.modal);
-    this.modal.showModal()
+    // this.modal = document.getElementById('dialog-dark-rounded') as any;
+    // dialogPolyfill.registerDialog(this.modal);
+    // this.modal.showModal()
+    const dialogRef = this.dialog.open(ModalMenuComponent, {
+      width: '80%',
+      data: this.routes
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+
+    });
   }
   closeMenu() {
     this.modal.close()

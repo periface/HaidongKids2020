@@ -3,7 +3,8 @@ import {
   MatCardModule,
   MatFormFieldModule,
   MatInputModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatDialogModule
 } from '@angular/material';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 
@@ -13,7 +14,8 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     MatInputModule,
     MatToolbarModule,
     MatCardModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    MatDialogModule
   ]
 })
-export class AngularMaterialModule {}
+export class AngularMaterialModule { }

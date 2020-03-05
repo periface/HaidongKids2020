@@ -17,7 +17,7 @@
   border-radius: 100px;
 }
 .karina-img:hover {
-  background-image: url(/assets/img/karina.png)!important;
+  background-image: url(/assets/img/karina.png) !important;
 }
 .karina-org {
   border-radius: 65px;
@@ -151,4 +151,33 @@
 .nes-progress {
   width: 60%;
   height: 25px;
+}
+
+.animated-text {
+  display: inline-block !important;
+  overflow: hidden;
+  animation: typing 5s steps(30, end), blink 0.75s step-end;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+.delay {
+  animation-delay: 6s;
+}
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
