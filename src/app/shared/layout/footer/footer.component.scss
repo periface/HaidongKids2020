@@ -1,7 +1,7 @@
-@import '../../../../variables';
+@import "../../../../variables";
 .footer-container {
   background: $gris-cinotam;
-  padding-top: 20px;
+  padding-top: 0px;
 }
 .img-uat {
   width: 50%;
@@ -24,4 +24,7 @@
 }
 h3 {
   margin-top: 0;
+}
+#game {
+  overflow: hidden;
 }

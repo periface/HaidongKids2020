@@ -12,8 +12,8 @@ export class SamuraiGameComponent implements AfterViewInit {
 
     }
     ngAfterViewInit(): void {
-        setTimeout(() => {
-            startSamuraiGame();
-        }, 1000);
+        // setTimeout(() => {
+        //     startSamuraiGame();
+        // }, 1000);
     }
 }
